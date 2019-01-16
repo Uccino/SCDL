@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDL | Download soundcloud </title>
+    <meta name="description" content="An easy and straightforward way to download soundcloud playlists / tracks to your device!">
+    <meta name="keywords" content="Soundcloud, Downloader, Download, Music, Songs, Playlist, Sets, Tracks">
+    <meta name="author" content="Corné Hoeving">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="CSS/style.css">       
+</head>
+
+<body>   
+<section class="section">
+    <div class="container has-text-centered">
+        <!-- Title -->
+        <h1 class="title">
+            Soundcloud downloader
+        </h1>
+        <!-- Input field -->
+        <div class="columns is-centered">
+            <div class="column is-three-fifths">
+                <table class="table">
+                    <div class="field is-grouped">
+                        <p class="control is-expanded">
+                            <input id="soundcloudUrl" class="input" type="text" placeholder="Enter a soundcloud link">
+                        </p>
+                        <p class="control">
+                            <a id="scLoad" class="button is-info">Load</a>
+                        </p>
+                        <p class="control">
+                            <a id="scDown" class="button is-info">Download</a>
+                        </p>
+                    </div>
+                    <div id="outputMessage">
+
+                    </div>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!-- Table -->
+    <div class="columns is-centered">
+        <div class="column is-three-fifths">
+            <table id="songTable" class="table is-fullwidth is-hoverable">
+                <thead>
+                    <tr>
+                        <th>Artist</abbr>
+                        </th>
+                        <th>Title</abbr>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+    
+<script src="JS/Soundcloud.js"></script>    
+
+
+<script type="text/javascript" src="./JS/jszip.js"></script>
+<script type="text/javascript" src="./JS/jszip-utils.js"></script>
+<script type="text/javascript" src="./JS/FileSaver.js"></script>
+
+<!-- Event listeners -->
+
+<script>
+    var load = document.getElementById("scLoad");
+    var download = document.getElementById("scDown");
+    load.addEventListener("click", loadSoundcloudSongs, false);
+    download.addEventListener("click", downloadSoundcloudSongs, false);   
+
+</script>
+
+</body>
+
+</html>
