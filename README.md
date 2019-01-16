@@ -1,6 +1,7 @@
 # SCDL
 Easy to use soundcloud downloading tool written in JS
 
+demo: https://cornehoeving.nl/SCDL
 
 How to use:
 1. Download this repo and extract the zip to your computer.
